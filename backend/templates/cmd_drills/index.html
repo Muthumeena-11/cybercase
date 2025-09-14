@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Levels{% endblock %}
+{% block content %}
+<h2>Levels</h2>
+<ul class="levels">
+  {% for lvl in levels %}
+    <li>
+      <a href="{{ url_for('cmd_drills.level', level_id=lvl['id']) }}">
+        <strong>#{{ lvl['id'] }} - {{ lvl['title'] }}</strong><br>
+        <small>{{ lvl['description'] }}</small>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}

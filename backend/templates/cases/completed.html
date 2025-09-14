@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission Completed</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/completed.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">🎉 Mission Completed! 🎉</h1>
+        <p class="message">Congratulations, agent! You've successfully completed the mission.</p>
+        <div class="details">
+            <p class="score">Score: <span>{{ score }}</span></p>
+            <p class="time">Time Taken: <span>{{ time_taken }}</span></p>
+        </div>
+        <a class="home-button" href="/">Return to Home</a>
+    </div>
+</body>
+</html>
+

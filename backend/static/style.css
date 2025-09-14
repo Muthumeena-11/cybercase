@@ -1,0 +1,110 @@
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom, #3a7bd5, #00d2ff);
+    color: white;
+}
+
+.home-screen {
+    display: flex;
+    height: 100vh;
+}
+
+.apps {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.app-icon {
+    display: inline-block;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.edge-panel {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+}
+
+.hint {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.feedback {
+    color: yellow;
+    margin: 10px 0;
+}
+
+.mission-complete {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.hidden-owner {
+    display: none;
+} */
+
+/* base reset */
+*{box-sizing:border-box}
+body{font-family: Arial, sans-serif; background: #e6f2ff; margin:0; padding:20px;}
+
+/* phone frame */
+.phone-frame{width:416px;height:812px;margin:0 auto;border-radius:18px;box-shadow:0 8px 24px rgba(0,0,0,0.25);background:linear-gradient(180deg,#113c66,#3b86b5);color:#fff;overflow:hidden;}
+
+/* topbar */
+.topbar{display:flex;justify-content:space-between;padding:14px 18px;font-weight:700}
+.topbar .time{font-size:16px}
+.topbar .battery{font-size:14px}
+
+/* main layout inside phone */
+.main-area{display:flex;padding:10px 16px;gap:12px;height:calc(100% - 60px)}
+.left-area{flex:1}
+.icons-row{display:flex;gap:20px;padding-top:12px}
+.app-icon{width:84px;text-align:center;cursor:pointer}
+.app-icon img{width:64px;height:64px;border-radius:12px;background:#fff;padding:10px;display:block;margin:0 auto 8px}
+.app-icon div{color:#e6f7ff}
+
+/* content area */
+.content-area{margin-top:14px;background:transparent;min-height:520px;padding:8px}
+
+/* edge panel (right) */
+.edge-panel{width:240px;display:flex;flex-direction:column;gap:12px;align-self:flex-start}
+.card{background:rgba(0,0,0,0.35);border-radius:10px;padding:10px}
+.card-title{font-weight:700;margin-bottom:6px}
+.card-body input, .card-body textarea{width:100%;border-radius:6px;padding:8px;border:none}
+.card-body button{margin-top:8px;padding:6px 10px;border-radius:6px;border:none;cursor:pointer;background:#fff;color:#333}
+
+/* specific small styles */
+.call-list{list-style:none;padding:0;margin:0}
+.call-list li{background:#f5f8fb;color:#111;padding:8px;border-radius:6px;margin-bottom:8px}
+.call-list li .muted{font-size:12px;color:#666;margin-left:8px}
+.chat-box{background:#f6f6f6;color:#111;padding:8px;border-radius:8px}
+.chat-line{margin:8px 0}
+.note, .small{color:#e6f7ff;margin-top:10px}
+
+/* hidden owner (kept hidden) */
+.hidden-owner{display:none}
+
+/* feedback */
+.feedback{min-height:18px;margin-top:8px}
+.go-home-link {
+  color: #4b0202;           
+  text-decoration: none;    /* No underline */
+  font-weight: bold;  
+  font-size:26px      /* Bold text */
+}
+
+.go-home-link:hover {
+  color: #7a060a;           /* Darker green on hover */
+}

@@ -1,0 +1,16 @@
+body { font-family: Arial, sans-serif; margin:0; background:#f6f7fb; color:#a54242; }
+.container { max-width:900px; margin:20px auto; padding:0 16px; }
+.topbar { background:#0b2948; color:white; padding:12px 0; margin-bottom:18px; }
+.topbar a { color:white; text-decoration:none; }
+.levels { list-style:none; padding:0; }
+.levels li { background:white; padding:12px; margin-bottom:8px; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.06); }
+.terminal-form { margin-top:12px; display:flex; gap:8px; align-items:center; }
+.cmd-row { display:flex; align-items:center; gap:8px; flex:1; }
+.prompt { background:#222; color:#0f0; padding:6px 8px; border-radius:4px; font-family:monospace; }
+input[name="command"] { flex:1; padding:10px; border-radius:6px; border:1px solid #ddd; font-family:monospace; }
+.btn { padding:8px 12px; border-radius:6px; border:0; background:#0b2948; color:white; cursor:pointer; }
+.hint { background:#fffbe6; padding:10px; border-left:4px solid #ffd966; margin-top:12px; border-radius:4px; }
+.flashes { margin-bottom:12px; }
+.flash { padding:8px; border-radius:4px; margin-bottom:6px; }
+.flash.warning { background:#fff4e5; border-left:4px solid #ffb84d; }
+.flash.danger { background:#ffe5e5; border-left:4px solid #ff6b6b; }

@@ -1,0 +1,15 @@
+{% extends "case2/base.html" %}
+{% block content %}
+<h2>File: {{ file.name }}</h2>
+<ul>
+    <li><b>Type:</b> {{ file.type }}</li>
+    <li><b>Size:</b> {{ file.size }} KB</li>
+    <li><b>Author:</b> {{ file.author }}</li>
+    <li><b>Modified:</b> {{ file.modified }}</li>
+    <li><b>Notes:</b> {{ file.notes }}</li>
+</ul>
+{% if file.content %}
+<pre>{{ file.content }}</pre>
+{% endif %}
+<a href="{{ url_for('case2.start', show_hidden=show_hidden) }}">Back to files</a>
+{% endblock %}

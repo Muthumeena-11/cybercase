@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<div class="row home-bg-watermark">
+  <div class="col-md-8">
+    <div class="card bg-light text-dark mb-3">
+      <div class="card-body">
+        <h4>Welcome, {{ user_name }}!</h4>
+        <p>Points earned: <strong>{{ points }}</strong></p>
+        <p>Badge: <strong>{{ badge }}</strong></p>
+        <hr>
+        <p class="mb-0"><strong>Tip:</strong> Always verify email domain before clicking links.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card bg-light text-dark mb-3">
+      <div class="card-body text-center">
+        <h5>Quick Links</h5>
+        <!-- <a class="btn btn-sm btn-outline-primary my-1 d-block" href="{{ url_for('cases.index') }}" title="Cases">Cases</a> -->
+        <!-- <a class="btn btn-sm btn-outline-success my-1 d-block" href="{{ url_for('alerts') }}" title="Threat Alerts">Threat Alerts</a> -->
+        <!-- <a class="btn btn-sm btn-outline-info my-1 d-block" href="{{ url_for('evidence') }}" title="Evidence Eye">Evidence Eye</a> -->
+        <!-- ✅ New Quiz link -->
+        <a class="btn home-quick-link-btn btn-outline-warning" href="{{ url_for('quiz.quiz') }}" title="Cyber Quiz">Take Quiz</a>
+        <a class="btn home-quick-link-btn btn-outline-info" href="{{ url_for('quiz.leaderboard') }}" title="Leader Board">Leader Board</a>
+        <!-- ✅ New Quiz link -->
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

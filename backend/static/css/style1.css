@@ -1,0 +1,63 @@
+
+/* base reset */
+*{box-sizing:border-box}
+body{font-family: Arial, sans-serif; background: #747a70; margin:0; padding:20px;}
+
+/* phone frame */
+.phone-frame{width:400px;height:730px;margin: 10px auto;border-radius:18px;box-shadow:15px 8px 24px rgba(0,0,0,0.25);background:linear-gradient(180deg,#e37e43,#7d490e);color:#fff;overflow:hidden;}
+
+/* topbar */
+.topbar{display:flex;justify-content:space-between;padding:14px 18px;font-weight:700}
+.topbar .time{font-size:16px}
+.topbar .battery{font-size:14px}
+
+/* main layout inside phone */
+.main-area{display:flex;padding:10px 16px;gap:12px;height:calc(100% - 60px)}
+.left-area{flex:1}
+.icons-row{display:flex;gap:20px;padding-top:12px}
+.app-icon{width:84px;text-align:center;cursor:pointer}
+.app-icon img{width:54px;height:54px;border-radius:12px;background:#fff;padding:10px;display:block;margin:0 auto 8px}
+.app-icon div{color:#e6f7ff}
+
+/* content area */
+.content-area{margin-top:14px;background:transparent;min-height:520px;padding:8px}
+
+/* edge panel (right) */
+.edge-panel{width:240px;display:flex;flex-direction:column;gap:12px;align-self:flex-start}
+.card{background:rgba(0,0,0,0.35);border-radius:10px;padding:10px}
+.card-title{font-weight:700;margin-bottom:6px}
+.card-body input, .card-body textarea{width:100%;border-radius:6px;padding:8px;border:none}
+.card-body button{margin-top:8px;padding:6px 10px;border-radius:6px;border:none;cursor:pointer;background:#fff;color:#333}
+
+/* specific small styles */
+.call-list{list-style:none;padding:0;margin:0}
+.call-list li{background:#f5f8fb;color:#111;padding:8px;border-radius:6px;margin-bottom:8px}
+.call-list li .muted{font-size:12px;color:#666;margin-left:8px}
+.chat-box{background:#f6f6f6;color:#111;padding:8px;border-radius:8px}
+.chat-line{margin:8px 0}
+.note, .small{color:#e6f7ff;margin-top:10px}
+
+/* hidden owner (kept hidden) */
+.hidden-owner{display:none}
+.welcome h3 {
+    color: #7e0d3e;   /* Change to any color you like */
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    /* text-transform: uppercase; */
+    font-style: italic;
+}
+.go-home-link {
+  position: absolute;
+  top: 500px;    /* distance from top */
+  left: 730px;   /* distance from left */
+  color: #8e0808;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 26px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+/* feedback */
+.feedback{min-height:18px;margin-top:8px}
+

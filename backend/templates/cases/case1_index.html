@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Peek-a-Phone — Mission 1</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+</head>
+<body>
+  <div class="phone-frame">
+    <!-- Top bar -->
+    <div class="topbar">
+      <div class="time">7:17 PM</div>
+      <div class="battery">🔋89%</div>
+    </div>
+
+    <div class="main-area">
+      <!-- Left side (apps + content) -->
+      <div class="left-area">
+        <div class="icons-row">
+          <a href="{{ url_for('cases.phone') }}" class="app-icon">
+            <img src="{{ url_for('static', filename='images/phone_icon.png') }}" alt="Phone">
+            <div>Phone</div>
+          </a>
+          <a href="{{ url_for('cases.messages') }}" class="app-icon">
+            <img src="{{ url_for('static', filename='images/msg_icon.png') }}" alt="Messages">
+            <div>Messages</div>
+          </a>
+        </div>
+
+        <div id="contentArea" class="content-area">
+          {% block content %}
+          <div class="welcome">
+            <h3>Find the owner's name</h3>
+            <a href="{{ url_for('cases.index') }}" class="go-home-link">⬅ Back</a>
+
+            <!-- <p>Open the Phone or Messages app to search clues.</p> -->
+          </div>
+          
+          {% endblock %}
+        </div>
+      </div>
+
+      <!-- Right side (edge panel) -->
+      <aside class="edge-panel">
+        <div class="card hint-card">
+          <div class="card-title">Hint</div>
+          <div class="card-body">
+            Some parts of the chat are encoded.
+          </div>
+        </div>
+        
+
+        <div class="card answer-card">
+          <div class="card-title">Answer</div>
+          <div class="card-body">
+            <!-- Flask form -->
+            <form action="{{ url_for('cases.check_answer') }}" method="post">
+              <input type="text" name="answer" placeholder="Enter owner's name" required>
+              <button type="submit">Submit</button>
+            </form>
+            {% if feedback %}
+              <div class="feedback">{{ feedback }}</div>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="card notes-card">
+          <div class="card-title">Notes</div>
+          <div class="card-body">
+            <textarea name="notes" placeholder="Take notes...">{{ notes|default('') }}</textarea>
+            <button type="button" onclick="this.previousElementSibling.value=''">Clear</button>
+          </div>
+        </div>
+
+        
+    </div>
+    
+  </div>
+</body>
+</html>

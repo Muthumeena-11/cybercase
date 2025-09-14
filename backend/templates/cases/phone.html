@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="phone-frame">
+    <h2>Recent Calls</h2>
+    <div class="call">📞 Incoming call – John Doe (10:15 AM)</div>
+    <div class="call">📤 Outgoing call – Alice (Yesterday 6:45 PM)</div>
+    <div class="call">📞 Incoming call – Bob (2 days ago)</div>
+    <a href="{{ url_for('cases.case1_index') }}" class="go-home-link">⬅ Back</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% extends "case2/base.html" %}
+{% block content %}
+<h2>Properties: {{ file.name }}</h2>
+<ul>
+    <li><b>Type:</b> {{ file.type }}</li>
+    <li><b>Size:</b> {{ file.size }} KB</li>
+    <li><b>Author:</b> {{ file.author }}</li>
+    <li><b>Modified:</b> {{ file.modified }}</li>
+    <li><b>Notes:</b> {{ file.notes }}</li>
+</ul>
+{% if exif %}
+<h3>EXIF Data</h3>
+<table>
+    {% for key, val in exif.items() %}
+    <tr>
+        <td><b>{{ key }}</b></td>
+        <td>{{ val }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
+<a href="{{ url_for('case2.start', show_hidden=show_hidden) }}">Back to files</a>
+{% endblock %}

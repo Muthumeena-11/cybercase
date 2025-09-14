@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card bg-light text-dark shadow-sm">
+      <div class="card-body">
+        <h3 class="card-title text-center mb-3">Login</h3>
+        <form method="post" action="{{ url_for('login') }}" id="loginForm" novalidate>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input required type="email" class="form-control" id="email" name="email" placeholder="you@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input required type="password" class="form-control" id="password" name="password" placeholder="Password">
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <p class="mb-0">New here? <a href="{{ url_for('signup') }}">Create an account</a></p>
+            <button type="submit" class="btn btn-primary" title="Login">Login</button>
+          </div>
+        </form>
+        <hr>
+        <p class="text-center mb-0 small">Demo account: <strong>test@example.com</strong> / <strong>password123</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

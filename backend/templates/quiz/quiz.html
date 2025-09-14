@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="quiz-shell card p-3">
+  <div id="intro">
+    <h2>Cyber Challenge</h2>
+    <p>Good Luck</p>
+    <button id="beginBtn" class="btn btn-primary">Begin Quiz</button>
+  </div>
+
+  <div id="questionArea" class="hidden">
+    <div class="timer">Time left: <span id="timer"></span>s</div>
+    <div class="progress"><div id="progressBar"></div></div>
+    <div id="qCard" class="qcard">
+      <div id="qNumber"></div>
+      <div id="qText" class="qtext"></div>
+      <div id="options" class="options"></div>
+    </div>
+    <div class="row mt-2">
+      <button id="prevBtn" class="btn btn-secondary">Previous</button>
+      <button id="nextBtn" class="btn btn-primary">Next</button>
+    </div>
+  </div>
+
+  <div id="resultArea" class="hidden card result p-3 mt-3">
+    <h2>Your Result</h2>
+    <p id="scoreText"></p>
+    <p id="badgeText" class="badge-box"></p>
+    <h3>Correctly Answered</h3>
+    <ul id="correctList"></ul>
+    <h3>Wrongly Answered</h3>
+    <ul id="wrongList"></ul>
+    <a href="{{ url_for('quiz.leaderboard') }}" class="btn btn-info">Leaderboard</a>
+    <a href="{{ url_for('quiz.quiz') }}" class="btn btn-warning">Try Again</a>
+  </div>
+</div>
+
+<!-- Include quiz-specific CSS/JS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='quiz/styles.css') }}">
+<script src="{{ url_for('static', filename='quiz/script.js') }}"></script>
+{% endblock %}

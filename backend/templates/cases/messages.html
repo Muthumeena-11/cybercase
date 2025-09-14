@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="phone-frame">
+    <h2>Chat with John Doe</h2>
+    <div class="chat">
+        <div class="message incoming">Hey, long time no see!</div>
+        <div class="message outgoing">Yeah, I’ve been busy. Did you meet our new project lead?</div>
+        <div class="message incoming">Not yet, but I heard their name is a3JpdGhpa2E=</div>
+        <div class="message outgoing">Interesting... maybe I should find out who that is 😉</div>
+    </div>
+    <a href="{{ url_for('cases.case1_index') }}">⬅ Back</a>
+</div>
+</body>
+</html>

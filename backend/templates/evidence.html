@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h3 class="evidence-title">Evidence Eye</h3>
+<div class="card evidence-card mt-3">
+  <div class="card-body">
+    <h5 class="card-title">Password Catcher Game</h5>
+    <p>Play the interactive password catcher game and test your skills.</p>
+    <a href="{{ url_for('password_game') }}" class="btn btn-primary">Launch Game</a>
+  </div>
+</div>
+{% endblock %}

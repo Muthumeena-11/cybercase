@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card p-3">
+  <h2>Leaderboard</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr><th>Badge</th><th>User</th><th>Score</th></tr>
+    </thead>
+    <tbody>
+    {% for r in leaderboard %}
+      <tr>
+        <td>{{ r['last_badge'] }}</td>
+        <td>{{ r['username'] }}</td>
+        <td>{{ r['last_score'] }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <a href="{{ url_for('quiz.quiz') }}" class="btn btn-primary">Back to Quiz</a>
+  <a href="{{ url_for('home') }}" class="btn btn-secondary">Home</a>
+</div>
+{% endblock %}

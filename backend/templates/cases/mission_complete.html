@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission Complete</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="phone-frame">
+<div class="mission-complete">
+    <h1>🎉 Mission Completed! 🎉</h1>
+    <p>Great job! You cracked the code and found the owner's name.</p>
+    <!-- <a href="{{ url_for('cases.index') }}">🏠 Go Home</a> -->
+     <a href="{{ url_for('cases.index') }}" class="go-home-link">🏠 Go Home</a>
+
+</div>
+</div>
+</body>
+</html>
+

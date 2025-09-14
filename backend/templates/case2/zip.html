@@ -1,0 +1,24 @@
+{% extends "case2/base.html" %}
+{% block content %}
+<h2>Contents of {{ parent.name }}</h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Size (KB)</th>
+        <th>Actions</th>
+    </tr>
+    {% for file in subfiles %}
+    <tr>
+        <td>{{ file.name }}</td>
+        <td>{{ file.type }}</td>
+        <td>{{ file.size }}</td>
+        <td>
+            <a href="{{ url_for('case2.file_page', file_id=file.id, show_hidden=show_hidden) }}">View</a>
+            <a href="{{ url_for('case2.properties', file_id=file.id, show_hidden=show_hidden) }}">Properties</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="{{ url_for('case2.start', show_hidden=show_hidden) }}">Back to files</a>
+{% endblock %}

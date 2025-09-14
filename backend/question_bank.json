@@ -1,0 +1,422 @@
+[
+  {
+    "id": 1,
+    "question": "What does XSS stand for?",
+    "options": [
+      "Cross-Site Scripting",
+      "Cross-Site Source",
+      "XML Secure Script",
+      "Executable Script Swap"
+    ],
+    "answer": 0,
+    "tags": [
+      "web"
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Which port does HTTP use by default?",
+    "options": [
+      "22",
+      "80",
+      "443",
+      "25"
+    ],
+    "answer": 1,
+    "tags": [
+      "network"
+    ]
+  },
+  {
+    "id": 3,
+    "question": "What is the purpose of a firewall?",
+    "options": [
+      "Encrypt data",
+      "Filter network traffic",
+      "Store passwords",
+      "Monitor keystrokes"
+    ],
+    "answer": 1,
+    "tags": [
+      "network"
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Which one is a strong password practice?",
+    "options": [
+      "Using 'password123'",
+      "Reusing passwords",
+      "Long passphrase with symbols",
+      "Using username as password"
+    ],
+    "answer": 2,
+    "tags": [
+      "auth"
+    ]
+  },
+  {
+    "id": 5,
+    "question": "What is phishing?",
+    "options": [
+      "A type of social engineering",
+      "A firewall rule",
+      "An encryption algorithm",
+      "A malware signature"
+    ],
+    "answer": 0,
+    "tags": [
+      "social"
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Which protocol is secure for web browsing?",
+    "options": [
+      "HTTP",
+      "FTP",
+      "TELNET",
+      "HTTPS"
+    ],
+    "answer": 3,
+    "tags": [
+      "web"
+    ]
+  },
+  {
+    "id": 7,
+    "question": "SQL Injection targets which component?",
+    "options": [
+      "Client browser",
+      "Database queries",
+      "Operating system kernel",
+      "DNS resolver"
+    ],
+    "answer": 1,
+    "tags": [
+      "web"
+    ]
+  },
+  {
+    "id": 8,
+    "question": "What does 'CIA' stand for in security?",
+    "options": [
+      "Confidentiality, Integrity, Availability",
+      "Control, Inspect, Authenticate",
+      "Confidentiality, Integrity, Accessibility",
+      "Certificate, Identity, Authorization"
+    ],
+    "answer": 0,
+    "tags": [
+      "concept"
+    ]
+  },
+  {
+    "id": 9,
+    "question": "Which tool is commonly used for network packet capture?",
+    "options": [
+      "Wireshark",
+      "Photoshop",
+      "Nmap",
+      "GIMP"
+    ],
+    "answer": 0,
+    "tags": [
+      "network"
+    ]
+  },
+  {
+    "id": 10,
+    "question": "What is two-factor authentication (2FA)?",
+    "options": [
+      "Two passwords",
+      "Two users",
+      "Two methods to verify identity",
+      "Two firewalls"
+    ],
+    "answer": 2,
+    "tags": [
+      "auth"
+    ]
+  },
+  {
+    "id": 11,
+    "question": "What is ransomware?",
+    "options": [
+      "Disk cleaner",
+      "Encryption-based malware demanding payment",
+      "Performance profiler",
+      "Network monitoring tool"
+    ],
+    "answer": 1,
+    "tags": [
+      "malware"
+    ]
+  },
+  {
+    "id": 12,
+    "question": "Which header prevents clickjacking by framing?",
+    "options": [
+      "X-Frame-Options",
+      "Content-Security-Policy",
+      "X-XSS-Protection",
+      "Strict-Transport-Security"
+    ],
+    "answer": 0,
+    "tags": [
+      "web"
+    ]
+  },
+  {
+    "id": 13,
+    "question": "What is brute-force attack?",
+    "options": [
+      "Guessing credentials by trial",
+      "Phishing via email",
+      "Intercepting traffic",
+      "Tampering with logs"
+    ],
+    "answer": 0,
+    "tags": [
+      "attack"
+    ]
+  },
+  {
+    "id": 14,
+    "question": "Which hashing algorithm is considered weak today?",
+    "options": [
+      "SHA-256",
+      "MD5",
+      "BLAKE2",
+      "SHA-3"
+    ],
+    "answer": 1,
+    "tags": [
+      "crypto"
+    ]
+  },
+  {
+    "id": 15,
+    "question": "What does VPN provide?",
+    "options": [
+      "Virtual Private Network",
+      "Virus Protection Network",
+      "Variable Proxy Node",
+      "Verified Public Network"
+    ],
+    "answer": 0,
+    "tags": [
+      "network"
+    ]
+  },
+  {
+    "id": 16,
+    "question": "Which is a common IoT security risk?",
+    "options": [
+      "Strong authentication",
+      "Unpatched firmware",
+      "Encrypted communication",
+      "Regular updates"
+    ],
+    "answer": 1,
+    "tags": [
+      "iot"
+    ]
+  },
+  {
+    "id": 17,
+    "question": "Social engineering mainly exploits:",
+    "options": [
+      "Software bugs",
+      "Human trust",
+      "CPU vulnerabilities",
+      "Network cables"
+    ],
+    "answer": 1,
+    "tags": [
+      "social"
+    ]
+  },
+  {
+    "id": 18,
+    "question": "Which command scans open ports?",
+    "options": [
+      "nmap",
+      "wget",
+      "git",
+      "docker"
+    ],
+    "answer": 0,
+    "tags": [
+      "network"
+    ]
+  },
+  {
+    "id": 19,
+    "question": "Least privilege principle means:",
+    "options": [
+      "Grant minimal permissions necessary",
+      "Give admin to all users",
+      "Remove all permissions",
+      "Grant all permissions for speed"
+    ],
+    "answer": 0,
+    "tags": [
+      "concept"
+    ]
+  },
+  {
+    "id": 20,
+    "question": "What is the role of HTTPS certificate?",
+    "options": [
+      "Compress data",
+      "Authenticate server and encrypt traffic",
+      "Store passwords",
+      "Monitor network"
+    ],
+    "answer": 1,
+    "tags": [
+      "web"
+    ]
+  },
+  {
+    "id": 21,
+    "question": "Cross-Site Request Forgery (CSRF) attacks:",
+    "options": [
+      "Steal cookies via XSS only",
+      "Force a user to perform unwanted actions",
+      "Encrypt data on server",
+      "Scan ports"
+    ],
+    "answer": 1,
+    "tags": [
+      "web"
+    ]
+  },
+  {
+    "id": 22,
+    "question": "An IDS is used to:",
+    "options": [
+      "Detect intrusions",
+      "Install drivers",
+      "Issue certificates",
+      "Design UI"
+    ],
+    "answer": 0,
+    "tags": [
+      "network"
+    ]
+  },
+  {
+    "id": 23,
+    "question": "Which is a safe way to handle passwords?",
+    "options": [
+      "Store as plaintext",
+      "Hash with salt",
+      "Email them",
+      "Log them"
+    ],
+    "answer": 1,
+    "tags": [
+      "auth"
+    ]
+  },
+  {
+    "id": 24,
+    "question": "What is 'tailgating' in physical security?",
+    "options": [
+      "Following an authorized person to enter restricted area",
+      "Changing logs",
+      "Network sniffing",
+      "Brute force login"
+    ],
+    "answer": 0,
+    "tags": [
+      "physical"
+    ]
+  },
+  {
+    "id": 25,
+    "question": "Which is a form of malware that self-replicates?",
+    "options": [
+      "Trojan",
+      "Worm",
+      "Adware",
+      "Rootkit"
+    ],
+    "answer": 1,
+    "tags": [
+      "malware"
+    ]
+  },
+  {
+    "id": 26,
+    "question": "HTTP status code 404 means:",
+    "options": [
+      "OK",
+      "Created",
+      "Not Found",
+      "Server Error"
+    ],
+    "answer": 2,
+    "tags": [
+      "web"
+    ]
+  },
+  {
+    "id": 27,
+    "question": "What is 'least privilege' useful against?",
+    "options": [
+      "Phishing",
+      "Privilege escalation",
+      "HTTPS break",
+      "DNS spoofing"
+    ],
+    "answer": 1,
+    "tags": [
+      "concept"
+    ]
+  },
+  {
+    "id": 28,
+    "question": "Which input validation protects against SQLi?",
+    "options": [
+      "Parameterized queries",
+      "String concatenation",
+      "Eval input",
+      "No validation"
+    ],
+    "answer": 0,
+    "tags": [
+      "web"
+    ]
+  },
+  {
+    "id": 29,
+    "question": "Which is a security header that helps mitigate XSS?",
+    "options": [
+      "Content-Security-Policy",
+      "Cache-Control",
+      "ETag",
+      "Server"
+    ],
+    "answer": 0,
+    "tags": [
+      "web"
+    ]
+  },
+  {
+    "id": 30,
+    "question": "What does 'patch management' refer to?",
+    "options": [
+      "Applying updates to fix vulnerabilities",
+      "Managing printer queues",
+      "Designing UI patches",
+      "Encrypting backups"
+    ],
+    "answer": 0,
+    "tags": [
+      "maintenance"
+    ]
+  }
+]

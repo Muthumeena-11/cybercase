@@ -1,0 +1,26 @@
+{% extends "case2/base.html" %}
+{% block content %}
+<h2>Case Assessment</h2>
+<form method="post">
+    <label for="malware_id">Which file is malware?</label>
+    <select name="malware_id" id="malware_id">
+        <option value="">--Select--</option>
+        {% for file in files %}
+        <option value="{{ file.id }}">{{ file.name }}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <label for="sensitive_id">Which file contains sensitive data?</label>
+    <select name="sensitive_id" id="sensitive_id">
+        <option value="">--Select--</option>
+        {% for file in files %}
+        <option value="{{ file.id }}">{{ file.name }}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <label for="exif_hint">EXIF phrase (optional):</label>
+    <input type="text" name="exif_hint" id="exif_hint" placeholder="Paste decoded phrase">
+    <br>
+    <button type="submit">Submit Assessment</button>
+</form>
+{% endblock %}

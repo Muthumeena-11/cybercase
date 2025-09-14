@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}Cleared{% endblock %}
+{% block content %}
+<h2>Cleared — Level {{ level['id'] }}</h2>
+<p>Nice work! You've cleared <strong>{{ level['title'] }}</strong>.</p>
+<p><a href="{{ url_for('cmd_drills.index') }}">Back to levels</a></p>
+{% endblock %}

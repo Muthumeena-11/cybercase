@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Level {{ level['id'] }}{% endblock %}
+{% block content %}
+<h2>Level {{ level['id'] }} — {{ level['title'] }}</h2>
+<p>{{ level['description'] }}</p>
+
+<form method="post" class="terminal-form" autocomplete="off">
+  <label for="command" class="sr-only">Enter command</label>
+  <div class="cmd-row"><span class="prompt">$</span>
+    <input id="command" name="command" autofocus placeholder="Write a single-line command and press Enter">
+  </div>
+  <button type="submit" class="btn">Run</button>
+</form>
+
+<div class="meta">
+  <p>Attempts: {{ attempts }}</p>
+  {% if hint_unlocked %}
+    <div class="hint"><strong>Hint:</strong> {{ level['hint'] }}</div>
+  {% else %}
+    <small>Hint unlocks after 2 failed attempts.</small>
+  {% endif %}
+</div>
+
+{% endblock %}

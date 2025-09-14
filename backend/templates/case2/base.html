@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CyberCase Files — Suspicious USB</title>
+<a href="{{ url_for('cases.index') }}" class="go-home-link">⬅ Back</a>
+
+  <!-- Global Styles -->
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> -->
+  
+  <!-- Case-Specific Styles (Overrides global if needed) -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='case2/styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <!-- Header Section -->
+    <div class="header">
+      <div class="logo">CyberCase <span>Files</span> • Suspicious USB Drive</div>
+      <div>
+        <a class="btn secondary" href="{{ url_for('index', show_hidden=('1' if show_hidden!='1' else '0')) }}">
+          {% if show_hidden=='1' %}Hide Hidden{% else %}Show Hidden{% endif %}
+        </a>
+        <a class="btn" href="{{ url_for('case2.assessment') }}">Submit Findings</a>
+      </div>
+    </div>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="alert {{ category }}">{{ message|safe }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <!-- Dynamic Content -->
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+    <footer>
+      Learn to think like an investigator. Don’t double-click unknowns. • Case ID: USB-INT-01
+    </footer>
+  </div>
+</body>
+</html>

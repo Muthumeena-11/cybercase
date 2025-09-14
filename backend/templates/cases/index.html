@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card shadow-sm mb-4">
+  <div class="card-body">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <h4 class="mb-0">Cases</h4>
+    </div>
+    <div class="row">
+      
+      <!-- Beginner Case -->
+      <div class="col-md-6 mb-3">
+        <div class="card h-100">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Case 1: Lost Phone Mission</h5>
+            <p class="card-text flex-grow-1">
+              Investigate a phone UI, decode clues, and identify the owner. Great for first-time agents.
+            </p>
+            <a href="{{ url_for('cases.case1_index') }}" class="btn btn-primary mt-auto">
+              Start Case 1
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Intermediate USB Case -->
+      <div class="col-md-6 mb-3">
+        <div class="card h-100">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Case 2: Suspicious USB</h5>
+            <p class="card-text flex-grow-1">
+              Analyze a USB dump, avoid malware traps, and extract evidence. Ready for investigation!
+            </p>
+            <a href="{{ url_for('case2.start') }}" class="btn btn-primary mt-auto">
+              Start Case 2
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

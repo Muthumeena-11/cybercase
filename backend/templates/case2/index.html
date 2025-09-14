@@ -1,0 +1,39 @@
+{% extends "case2/base.html" %}
+{% block content %}
+  <h2>USB Files</h2>
+
+  <!-- Toggle Hidden Files -->
+  <form method="get" action="{{ url_for('case2.start') }}" class="toggle-form">
+    <label>
+      <input type="checkbox" name="show_hidden" value="1" {% if show_hidden == "1" %}checked{% endif %}>
+      Show Hidden Files
+    </label>
+    <button type="submit" class="btn">Apply</button>
+  </form>
+
+  <!-- Grid View for Files -->
+  <div class="grid">
+    {% for file in files %}
+      <div class="card {% if file.is_hidden and show_hidden!='1' %}hidden{% endif %}">
+        <h3>{{ file.name }}</h3>
+        <div class="muted">{{ file.type }} • {{ file.size }} KB</div>
+        <hr class="sep"/>
+
+        <!-- Actions -->
+        <div class="form-row">
+          <a class="btn secondary" href="{{ url_for('case2.file_page', file_id=file.id, show_hidden=show_hidden) }}">Open</a>
+          <a class="btn secondary" href="{{ url_for('case2.properties', file_id=file.id, show_hidden=show_hidden) }}">Properties</a>
+          {% if file.type == 'zip' %}
+          <a class="btn secondary" href="{{ url_for('case2.extract_zip', file_id=file.id, show_hidden=show_hidden) }}">Extract</a>
+          {% endif %}
+        </div>
+
+        <!-- Badges -->
+        <div class="badges">
+          {% if file.is_hidden %}<span class="badge warn">Hidden</span>{% endif %}
+          {% if file.name.endswith('.pdf.exe') %}<span class="badge danger">Double extension</span>{% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
